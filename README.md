@@ -4,11 +4,11 @@ HashMasher is a command line based hash lookup tool. It's useful in incident res
 
 # Usage
 
- _               _                         _               
-| |__   __ _ ___| |__  _ __ ___   __ _ ___| |__   ___ _ __ 
-| '_ \ / _` / __| '_ \| '_ ` _ \ / _` / __| '_ \ / _ \ '__|
-| | | | (_| \__ \ | | | | | | | | (_| \__ \ | | |  __/ |   
-|_| |_|\__,_|___/_| |_|_| |_| |_|\__,_|___/_| |_|\___|_|   
+ _               _                         _               \n
+| |__   __ _ ___| |__  _ __ ___   __ _ ___| |__   ___ _ __ \n
+| '_ \ / _` / __| '_ \| '_ ` _ \ / _` / __| '_ \ / _ \ '__|\n
+| | | | (_| \__ \ | | | | | | | | (_| \__ \ | | |  __/ |   \n
+|_| |_|\__,_|___/_| |_|_| |_| |_|\__,_|___/_| |_|\___|_|   \n
 													   
 
 usage: hashMasher.py [-h] [-d DIRECTORY] [-r RECURSIVE] [-f FILE]
@@ -24,4 +24,3 @@ optional arguments:
                         Search recursively
   -f FILE, --file FILE  Select a file to lookup
 
-  
