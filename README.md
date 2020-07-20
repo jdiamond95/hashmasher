@@ -3,7 +3,7 @@
 
 HashMasher is a command line based hash lookup tool. It's useful in incident response instances where a large number of file hashes need to quickly looked up for quick wins.
 
-# Usage
+## Usage
 
 <!-- language: lang-none -->
 	 _               _                         _               
@@ -25,7 +25,7 @@ optional arguments:
                         Search recursively
   -f FILE, --file FILE  Select a file to lookup
 
-# Setup
+## Setup
 ###  Virtual Env and Dependancies
 Initialise a Python Virtual Environment ([https://virtualenv.pypa.io/en/latest/](https://virtualenv.pypa.io/en/latest/)) using: `virtualenv venv` then install all dependencies using `pip install -r requirements.txt`.
 
