@@ -95,7 +95,7 @@ def main():
 		hashes, files = getHashList(args.directory)
 		for i in range(0, len(hashes)):
 			printOutput(queryVirusTotal(hashes[i]), files[i], i + 1)
-			time.sleep(26)
+			# time.sleep(26)
 
 if __name__ == "__main__":
 	print(banner)
