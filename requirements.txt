@@ -1,0 +1,9 @@
+certifi==2020.4.5.1
+chardet==3.0.4
+colorama==0.4.3
+console==0.990
+ezenv==0.91
+fabulous==0.3.0
+idna==2.9
+requests==2.23.0
+urllib3==1.25.9
