@@ -27,7 +27,7 @@ HashMasher is a command line based hash lookup tool. It's useful in incident res
 
 ## Setup
 ###  Virtual Env and Dependancies
-Initialise a Python Virtual Environment ([https://virtualenv.pypa.io/en/latest/](https://virtualenv.pypa.io/en/latest/)) using: `virtualenv venv` then install all dependencies using `pip install -r requirements.txt`.
+Initialise a Python Virtual Environment ([https://virtualenv.pypa.io/en/latest/](https://virtualenv.pypa.io/en/latest/)) using: `virtualenv venv`. Activate the virtual environment using `source venv/bin/activate` then install all dependencies using `pip install -r requirements.txt`.
 
 ### Environment Variables
 The script relies on environment variables to access API keys so they're not straight in the code. Add the following variables in your .bash_profile
