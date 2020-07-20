@@ -12,18 +12,18 @@ HashMasher is a command line based hash lookup tool. It's useful in incident res
 	| | | | (_| \__ \ | | | | | | | | (_| \__ \ | | |  __/ |   
 	|_| |_|\__,_|___/_| |_|_| |_| |_|\__,_|___/_| |_|\___|_|   
 
-usage: hashMasher.py [-h] [-d DIRECTORY] [-r RECURSIVE] [-f FILE]
+	usage: hashMasher.py [-h] [-d DIRECTORY] [-r RECURSIVE] [-f FILE]
 
-Bulk Hash Lookup Tool
+	Bulk Hash Lookup Tool
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -d DIRECTORY, --directory DIRECTORY
-                        Absolute or relative directory path of files to be
-                        hashed
-  -r RECURSIVE, --recursive RECURSIVE
-                        Search recursively
-  -f FILE, --file FILE  Select a file to lookup
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  -d DIRECTORY, --directory DIRECTORY
+	                        Absolute or relative directory path of files to be
+	                        hashed
+	  -r RECURSIVE, --recursive RECURSIVE
+	                        Search recursively
+	  -f FILE, --file FILE  Select a file to lookup
 
 ## Setup
 ###  Virtual Env and Dependancies
