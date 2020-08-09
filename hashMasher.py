@@ -2,11 +2,9 @@ import os
 import time
 import argparse
 
-vtAPIKey = os.environ.get('VTAPIKey')
-virusTotalBase = "https://www.virustotal.com/vtapi/v2/"
-vtFileReport = "file/report"
-session = requests.Session()
-fileBlockSize = 65536
+from lib.output import printOutput
+from lib.helper import *
+
 banner = """
  _               _                         _               
 | |__   __ _ ___| |__  _ __ ___   __ _ ___| |__   ___ _ __ 
@@ -20,20 +18,26 @@ banner = """
 
 def main():
 	if args.file:
-		printOutput(queryVirusTotal(getFileHash(args.file)), args.file, 'File')
+		# Print output should take a hash and call the VT lookup etc
+		print(args.file)
+		printOutput(args.file, getFileName(args.file), "File")
 
 	elif args.directory:
-		hashes, files = getHashList(args.directory)
-		for i in range(0, len(hashes)):
-			printOutput(queryVirusTotal(hashes[i]), files[i], i + 1)
+		if args.recursive:
+			files = getFileList(args.directory, True)
+		else:
+			files = getFileList(args.directory, False)
+		print(files)
+		for i in range(0, len(files)):
+			printOutput(files[i], getFileName(files[i]), i)
 			time.sleep(15)
 
 
 if __name__ == "__main__":
-	print(banner)
+	print(banner)	
 	parser = argparse.ArgumentParser(description="Bulk Hash Lookup Tool")
-	parser.add_argument('-d', "--directory", help="Absolute or relative directory path of files to be hashed", type=str)
-	parser.add_argument('-r', "--recursive", help="Search recursively", type=str)
 	parser.add_argument('-f', "--file", help="Select a file to lookup", type=str)
+	parser.add_argument('-d', "--directory", help="Absolute or relative directory path of files to be hashed", type=str)
+	parser.add_argument('-r', "--recursive", help="Search recursively", action='store_const', const='recursive')	
 	args = parser.parse_args()
 	main()
